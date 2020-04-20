@@ -10,4 +10,14 @@ input.onButtonPressed(Button.B, function () {
 input.onButtonPressed(Button.A, function () {
     bluetooth.uartWriteString("hello")
 })
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # . .
+    . . . . .
+    . . . . .
+    `)
 bluetooth.startUartService()
+bluetooth.startButtonService()
+bluetooth.startLEDService()
+bluetooth.startTemperatureService()
